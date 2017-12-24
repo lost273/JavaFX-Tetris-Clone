@@ -4,7 +4,7 @@ import com.quirko.logic.MatrixOperations;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GBrick implements Brick{
+final class GBrick implements Brick{
     private final List<int[][]> brickMatrix = new ArrayList<>();
 
     public GBrick() {
@@ -20,7 +20,7 @@ public class GBrick implements Brick{
                 {7, 0, 0, 0},
                 {0, 0, 0, 0}
         });
-    
+    }
     @Override
     public List<int[][]> getShapeMatrix() {
         return MatrixOperations.deepCopyList(brickMatrix);
